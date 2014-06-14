@@ -190,6 +190,7 @@ Ext.define('net_builder.controller.Templates', {
         });
         if(store.read().data.keys.length){
          MyVariables.login_token_from_django = store.read().data.items[0].data.JWT_token;
+         Ext.util.Cookies.clear('jwt_token');
          Ext.util.Cookies.set('jwt_token',MyVariables.login_token_from_django);
         } else{
           window.location.href = 'index.html';
