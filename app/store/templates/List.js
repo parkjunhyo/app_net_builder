@@ -22,7 +22,7 @@ Ext.define('net_builder.store.templates.List', {
               var store = Ext.create('Ext.data.Store', {
                    model: "Login"
               });
-              store.getProxy().clear();
+              store.getProxy().clear('JWT_token');
             } else{
               window.location.reload();
             }; 

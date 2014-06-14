@@ -34,7 +34,7 @@ Ext.define('net_builder.controller.Logins', {
            var store = Ext.create('Ext.data.Store', {
               model: "Login"
            });
-           store.getProxy().clear();
+           store.getProxy().clear('jwt_token');
            Ext.util.Cookies.clear('jwt_token');
     
    },
